@@ -1,20 +1,28 @@
-import React from 'react';
+import React from "react";
 
-const CardImagen = (props) =>{
-    const {previewURL,tags, likes,downloads,favorites,pageURL} = props.image;
-    return(
-        <div className="col-lg-3 p-1">
-        <div className="card ">
-            <img src={previewURL} className="card-img-top img-card" alt={tags}/>
-            <div className="card-body">
-                <p className="card-text">{likes} Me gusta</p>
-                <p className="card-text">{favorites} Descargas</p>
-                <p className="card-text">{downloads} Descargas</p>
-                <a href={pageURL} target="_blank" rel="noopener noreferrer" className="btn btn-block btn-outline-warning">Ver imagen</a>
-                </div>
+const CardImagen = ({ image, onClick, index }) => {
+  const { previewURL, tags, likes, downloads, comments } = image;
+  return (
+    <div className="col-lg-3 p-1">
+      <div className="card ">
+        <div className="container-image-card">
+          <img src={previewURL} className="card-img-top img-card" alt={tags} />
         </div>
+        <div className="card-body">
+          <p className="card-text">{likes} Me gusta</p>
+          <p className="card-text">{comments} Commentarios</p>
+          <p className="card-text">{downloads} Descargas</p>
+          <button
+            onClick={() => onClick(index)}
+            rel="noopener noreferrer"
+            className="img-card btn btn-block btn-outline-warning"
+          >
+            Ver imagen
+          </button>
         </div>
-        );
-}
+      </div>
+    </div>
+  );
+};
 
-export default CardImagen
+export default CardImagen;
