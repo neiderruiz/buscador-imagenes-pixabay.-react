@@ -1,4 +1,4 @@
-This project was bootstrapped with [see project]( https://neiderruiz.github.io/buscador-imagenes-pixabay.-react/).
+[see project]( https://neiderruiz.github.io/buscador-imagenes-pixabay.-react/).
 
 ## copy project, run terminal
 
