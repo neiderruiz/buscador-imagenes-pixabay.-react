@@ -1,5 +1,6 @@
 {
   "name": "buscador-imagenes",
+  "homepage": "https://neiderruiz.github.io/buscador-imagenes-pixabay.-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp -r build/* public_html",
+    "upload-git": "react-scripts build && cp -r build/* public_html && cd public_html && git add . && git commit -m \"build\" && git push origin deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
